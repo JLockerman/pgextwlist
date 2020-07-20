@@ -252,7 +252,9 @@ static bool
 extension_is_whitelisted(const char *name)
 {
 	bool        whitelisted = false;
+	elog(WARNING, "ee: %s", extwlist_extensions);
 	char       *rawnames = pstrdup(extwlist_extensions);
+	elog(WARNING, "raw: %s", rawnames);
 	List       *extensions;
 	ListCell   *lc;
 
